@@ -3,6 +3,7 @@ package com.imooc.o2o.dao;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -17,6 +18,34 @@ import com.imooc.o2o.entity.ShopCategory;
 public class ShopDaoTest extends BaseTest{
 	@Autowired
 	private ShopDao shopDao;
+	
+	
+	@Test
+	public void testQueryShopList() {
+		Shop shopCondition = new Shop();
+		ShopCategory parent = new ShopCategory();
+		parent.setShopCategoryId(1L);
+		ShopCategory category = new ShopCategory();
+		category.setParent(parent);
+		shopCondition.setShopCategory(category);
+		List<Shop> shoplist = shopDao.queryShopList(shopCondition, 0, 5);
+		System.out.println("first================================14");
+		System.out.println(shoplist.size());
+		for(Shop shop:shoplist) {
+			System.out.println(shop.getShopId()+ shop.getShopName());
+		}
+	}
+	
+	@Ignore
+	@Test
+	public void testQueryByShopId() {
+		long shopId = 8;
+		Shop shop = shopDao.queryByShopId(shopId);
+		System.out.println("areaId" + shop.getArea().getAreaId());
+		System.out.println("areaName" + shop.getArea().getAreaName());
+	}
+	
+	@Ignore
 	@Test
 	public void testInsertShop() {
 		// TODO Auto-generated method stub

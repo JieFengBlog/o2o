@@ -1,7 +1,5 @@
 package com.imooc.o2o.dao;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.List;
 
 import org.junit.Test;
@@ -16,10 +14,10 @@ public class ShopCategoryDaoTest extends BaseTest{
 	
 	@Test
 	public void testQueryShopCategory() {
-		List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(new ShopCategory());
-		ShopCategory category = shopCategoryList.get(0);
-		System.out.println(category.getShopCategoryName());
-		assertEquals(1, shopCategoryList.size());
+		List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(null);
+		for(ShopCategory shopCategory:shopCategoryList) {
+			System.out.println(shopCategory.getShopCategoryDesc());
+		}
 	}
 	
 }
