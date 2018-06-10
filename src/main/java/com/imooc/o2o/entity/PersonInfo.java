@@ -5,7 +5,7 @@ import java.util.Date;
 public class PersonInfo {
 	private Long userId;//ID
 	private String name;
-	private String profileImage;//头像地址
+	private String profileImg;//头像地址
 	private String email;
 	private String gender;//性别
 	private Integer enableStatus;//激活状态
@@ -25,11 +25,11 @@ public class PersonInfo {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getProfileImage() {
-		return profileImage;
+	public String setProfileImg() {
+		return profileImg;
 	}
-	public void setProfileImage(String profileImage) {
-		this.profileImage = profileImage;
+	public void setProfileImg(String profileImg) {
+		this.profileImg = profileImg;
 	}
 	public String getEmail() {
 		return email;

@@ -11,7 +11,7 @@ $(function() {
 		// 获取输入的帐号
 		var userName = $('#username').val();
 		// 获取输入的密码
-		var password = $('#psw').val();
+		var password = $('#password').val();
 		// 获取验证码信息
 		var verifyCodeActual = $('#j_captcha').val();
 		// 是否需要验证码验证，默认为false,即不需要

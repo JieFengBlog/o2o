@@ -9,7 +9,7 @@ public class PathUtil {
 		if (os.toLowerCase().startsWith("win")) {
 			basePath = "D:" + File.separator + "projectdev" + File.separator + "image" ;
 		} else {
-			basePath = File.separator + "home" + File.separator + "xiangze" + File.separator + "image";
+			basePath = File.separator + "home" + File.separator + "o2odir" + File.separator + "image";
 		}
 		return basePath;
 	}
